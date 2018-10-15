@@ -11,7 +11,7 @@ class TwitterStreamListener(tweepy.StreamListener):
         tweet = status._json
         self.file.write( json.dumps(tweet) + '\n' )
         self.num_tweets += 1
-        if self.num_tweets < 100:
+        if self.num_tweets < 1000:
             return True
         else:
             return False
